@@ -1,5 +1,8 @@
 <html>
     <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
         <title>Theodore's blog</title>
     </head>
     <body>
@@ -7,16 +10,12 @@
             <h1><a href="/">Theodore's blog</a></h1>
         </div>
 
-        <div>
+        {% for post in posts %}
+            <div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         
-            <h2><a href="">1st post</a></h2>
-            <p>Standard Urinalysis</p>
-        </div>
-
-        <div>
-     
-            <h2><a href="">2nd post</a></h2>
-            <p>Urine culture</p>
-        </div>
     </body>
 </html>
